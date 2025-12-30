@@ -50,6 +50,31 @@ Before abandonment, the following components were implemented:
 - `popup.html/js` - Extension popup interface
 - `icons/` - Extension icons and graphics
 
+## Alternative Solution: Windows Desktop Application
+
+While browser extensions face significant limitations, a Windows desktop application could potentially overcome these technical barriers:
+
+### Potential Windows Application Approach
+
+A native Windows application could implement the FineTune concept through:
+
+1. **System-Level Audio Control**: Direct access to Windows audio APIs for comprehensive volume management
+2. **Process Monitoring**: Track active applications and browser processes to detect media playback
+3. **Audio Session Management**: Utilize Windows Audio Session API (WASAPI) to control audio per-application
+4. **Browser Integration**: Use browser automation or accessibility APIs to detect and respond to media content
+5. **Global Hotkeys**: System-wide keyboard shortcuts for quick volume adjustments
+
+### Advantages of Desktop Approach
+
+- **Full System Access**: No browser security restrictions
+- **Cross-Application Control**: Can manage audio from any application, not just browsers
+- **Advanced Audio APIs**: Access to low-level Windows audio management
+- **Persistent Settings**: System-wide configuration storage
+
+### Current Status
+
+**No active development** on a Windows application version at this time. This remains a potential future direction but is not currently planned.
+
 ## Conclusion
 
 While the concept of a universal volume control extension is valuable, the technical constraints imposed by modern browser security architectures make reliable implementation impossible. This project serves as an example of how browser security policies, while necessary for user protection, can sometimes limit the scope of useful browser enhancements.
