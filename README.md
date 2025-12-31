@@ -1,8 +1,8 @@
-# FineTune - Chrome Extension
+# FineTune - Firefox Extension
 
 ## Project Description
 
-FineTune was an intelligent volume control Chrome extension designed to provide persistent volume settings across websites with automatic adjustment capabilities. The extension aimed to solve the common frustration of having to manually adjust volume levels when navigating between different media websites and platforms.
+FineTune was an intelligent volume control Firefox extension designed to provide persistent volume settings across websites with automatic adjustment capabilities. The extension aimed to solve the common frustration of having to manually adjust volume levels when navigating between different media websites and platforms.
 
 ### Intended Features
 
@@ -19,7 +19,7 @@ This project has been abandoned due to technical limitations that made the core 
 
 1. **Browser Security Restrictions**: Modern browsers implement strict security measures that prevent extensions from reliably controlling audio volume across different origins and media elements.
 
-2. **Cross-Origin Limitations**: Chrome extensions cannot consistently access and manipulate audio elements from different domains due to CORS policies and sandboxing.
+2. **Cross-Origin Limitations**: Firefox extensions cannot consistently access and manipulate audio elements from different domains due to CORS policies and sandboxing.
 
 3. **Media Element Diversity**: Different websites use vastly different methods for audio playback (HTML5 audio, Web Audio API, Flash, custom players), making a universal solution technically infeasible.
 
@@ -27,7 +27,7 @@ This project has been abandoned due to technical limitations that made the core 
 
 ### Technical Barriers
 
-- Chrome's content script security model prevents reliable cross-domain audio manipulation
+- Firefox's content script security model prevents reliable cross-domain audio manipulation
 - Many websites use Content Security Policy (CSP) headers that block extension interference
 - Audio APIs vary significantly between different media platforms
 - Real-time volume adjustment requires deep integration with each website's specific audio implementation
@@ -36,15 +36,15 @@ This project has been abandoned due to technical limitations that made the core 
 
 Before abandonment, the following components were implemented:
 
-- **Basic Extension Structure**: Manifest v3 compliant Chrome extension setup
+- **Basic Extension Structure**: Manifest v3 compliant Firefox extension setup
 - **Volume Manager Class**: Core logic for volume state management
-- **Storage Integration**: Chrome storage API for persisting user preferences
+- **Storage Integration**: Firefox storage API for persisting user preferences
 - **Popup Interface**: Basic HTML/CSS/JS popup for user interaction
 - **Content Script Injection**: Framework for injecting scripts into web pages
 
 ## Files Overview
 
-- `manifest.json` - Chrome extension configuration
+- `manifest.json` - Firefox extension configuration
 - `background.js` - Service worker with volume management logic
 - `content.js` - Content script for page interaction (limited functionality)
 - `popup.html/js` - Extension popup interface
